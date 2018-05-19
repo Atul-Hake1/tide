@@ -1,0 +1,1 @@
+java -jar %~dp0selenium-server-standalone-3.8.1.jar -role hub

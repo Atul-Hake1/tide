@@ -1,0 +1,1 @@
+java -Dwebdriver.chrome.driver=%~dp0chromedriver.exe -jar %~dp0selenium-server-standalone-3.8.1.jar -role node -hub http://localhost:4444/grid/register -port 5555 -browser browserName=chrome

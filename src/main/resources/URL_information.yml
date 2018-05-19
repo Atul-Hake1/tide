@@ -1,0 +1,16 @@
+#Yml for storing URL/Login information for Tide.
+url_information:
+  qa:
+    url: "http://tidestaging-functions.azurewebsites.net/"
+    email1: "admin@tide.com"
+    password1: "Test123@"
+
+  staging:
+    url: "https://tideprod-tideqa1.azurewebsites.net/"
+    email1: "admin@tide.com"
+    password1: "Systenics123@"
+    
+  af:
+    url: "http://tidestaging-functions.azurewebsites.net/"
+    email1: "admin@tide.com"
+    password1: "Systenics123@"

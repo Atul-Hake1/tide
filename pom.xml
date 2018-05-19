@@ -1,0 +1,213 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>TideTestSuite</groupId>
+  <artifactId>TideTestSuite</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>TideTestSuite</name>
+  
+  <dependencies>
+			<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>1.10</version>
+			</dependency>
+						
+			<dependency>
+			<groupId>org.seleniumhq.selenium.grid</groupId>
+			<artifactId>selenium-grid-hub</artifactId>
+			<version>1.0.5</version>
+			</dependency>
+		
+    		<dependency>
+       	 	<groupId>org.seleniumhq.selenium</groupId>
+        	<artifactId>selenium-server</artifactId>
+        	<version>3.4.0</version>
+    		</dependency>
+    		
+			<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.11</version>
+			</dependency>
+			
+			<dependency>
+			<groupId>org.apache.maven.surefire</groupId>
+			<artifactId>surefire-testng</artifactId>
+			<version>2.20.1</version>
+			</dependency>
+			
+			<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+			</dependency>
+			
+			<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.4.0</version>
+			</dependency>
+	
+			<dependency>
+    		<groupId>com.sun.mail</groupId>
+    		<artifactId>javax.mail</artifactId>
+    		<version>1.6.0</version>
+			</dependency>
+			
+			<dependency>
+    		<groupId>javax.activation</groupId>
+    		<artifactId>activation</artifactId>
+    		<version>1.1</version>
+			</dependency>
+			
+			<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.8</version>
+			</dependency>
+			
+			<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6.12</version>
+			</dependency>
+
+			<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk16</artifactId>
+			<version>1.46</version>
+			</dependency>
+			
+			<dependency>
+			<groupId>net.schmizz</groupId>
+			<artifactId>sshj</artifactId>
+			<version>0.7.0</version>
+			</dependency>
+			
+			<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>0.9.27</version>
+			</dependency>
+			
+			<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>0.9.27</version>
+			</dependency>
+			
+			<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.2</version>
+			</dependency>
+			
+			<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+			</dependency>
+
+			<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+			</dependency>
+			
+  			
+			<dependency>
+       		<groupId>com.opera</groupId>
+       	 	<artifactId>operadriver</artifactId>
+        	<version>1.5</version>
+    		</dependency>
+    		
+    		<dependency>
+        	<groupId>org.seleniumhq.selenium</groupId>
+        	<artifactId>selenium-firefox-driver</artifactId>
+       		<version>3.4.0</version>
+       		</dependency>
+       		   
+       		<dependency>
+       		<groupId>com.paulhammant</groupId>
+      		<artifactId>ngwebdriver</artifactId>
+      		<version>1.0</version>
+   	 		</dependency>
+   	 		
+   	 		<dependency>
+     		<groupId>com.jprotractor</groupId>
+     		<artifactId>jprotractor</artifactId>
+     		<version>1.0-SNAPSHOT</version>
+     		<scope>system</scope>
+     		<systemPath>${project.basedir}/src/main/resources/jprotractor-1.0-SNAPSHOT.jar</systemPath>
+    		</dependency>
+    		
+    		<dependency>
+     		<groupId>org.monte</groupId>
+      		<artifactId>screen-recorder</artifactId>
+      		<version>0.7.7</version>
+      		<scope>system</scope>
+       		<systemPath>${project.basedir}/src/main/resources/MonteScreenRecorder.jar</systemPath>
+   			</dependency>
+    		 
+ </dependencies>
+
+	<build>
+		
+		<directory>target</directory>
+        <outputDirectory>target/classes</outputDirectory>
+        <finalName>TideTestSuite-0.0.1-SNAPSHOT</finalName>
+        <testOutputDirectory>target/test-classes</testOutputDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+            </testResource>
+        </testResources>
+        
+		<plugins>
+		<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>3.3</version>
+		<configuration>
+		<source>1.8</source>
+		<target>1.8</target>
+		<showWarnings>false</showWarnings>
+		</configuration>
+		</plugin>
+		
+		<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-plugin</artifactId>
+		<version>2.20.1</version>
+		<configuration>
+		<suiteXmlFiles>
+		<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+		</suiteXmlFiles>
+		</configuration>
+		</plugin>
+		
+		<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.18.1</version>
+        <executions>
+        <execution>
+        <goals>
+        <goal>integration-test</goal>
+        <goal>verify</goal>
+        </goals>
+        </execution>
+        </executions>
+      	</plugin>
+</plugins>
+</build> 
+  
+</project>
